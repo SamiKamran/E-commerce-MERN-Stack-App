@@ -21,7 +21,15 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "/frontend/build"))); // Serve static files
 app.use(morgan("dev")); // Use Morgan for logging
-app.use(cors()); // Enable CORS
+
+app.use(cors(
+  {
+      origin: ["https://e-commerce-mern-stack-app-frontend.vercel.app/"],
+      methods: ["POST", "GET"],
+      credentials: true
+  }
+));
+
 
 const PORT = process.env.PORT || 9000;
 
