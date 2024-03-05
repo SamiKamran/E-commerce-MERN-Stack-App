@@ -24,7 +24,7 @@ app.use(morgan("dev")); // Use Morgan for logging
 
 app.use(cors(
   {
-      origin: ["https://e-commerce-mern-stack-app-frontend.vercel.app"],
+      origin: ["https://e-commerce-mern-stack-app-frontend.vercel.app/"],
       methods: ["POST", "GET"],
       credentials: true
   }
